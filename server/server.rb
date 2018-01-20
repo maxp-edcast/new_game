@@ -10,3 +10,9 @@ require_relative './lib/websockets.rb'
 require_relative './lib/database.rb'
 
 Thread.new { EM.run { Websockets.start! } }
+
+class Server < Sinatra::Base
+  get '/' do
+    "hello world"
+  end
+end
