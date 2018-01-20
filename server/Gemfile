@@ -8,3 +8,5 @@ gem 'em-websocket'
 gem 'dm-postgres-adapter'
 gem 'data_mapper'
 gem 'rack'
+
+gem 'byebug'

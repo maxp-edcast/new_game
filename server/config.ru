@@ -1,2 +1,2 @@
 require './server.rb'
-Server.run!
+run Server
