@@ -2,7 +2,7 @@
 module Input
   # √
   def get_input(opts={})
-    opts.values.each.with_index |prompt, idx|
+    opts.values.each.with_index do |prompt, idx|
       print "#{idx + 1}: "
       puts prompt
     end

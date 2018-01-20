@@ -1,12 +1,16 @@
-%w{
-  deps core_ext base input
-  cost card player
-}.each do |file|
-  require_relative "./lib/#{file}.rb"
-end
-
+require_relative './input.rb'
+require_relative './base.rb'
 
 class Game < Base
+end
+
+require_relative './game/core_ext.rb'
+require_relative './game/cost.rb'
+require_relative './game/card.rb'
+require_relative './game/player.rb'
+
+
+class Game
   self.attributes = {
     players: [],
     winner: nil,
@@ -187,7 +191,6 @@ class Game < Base
 
   def ending_phase
     end_step
-    end
   end
 
   def apply_phasing
